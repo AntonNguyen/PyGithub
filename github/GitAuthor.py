@@ -8,7 +8,7 @@
 # Copyright 2013 Vincent Jacques <vincent@vincent-jacques.net>                 #
 #                                                                              #
 # This file is part of PyGithub.                                               #
-# http://pygithub.github.io/PyGithub/v1/index.html                             #
+# http://pygithub.readthedocs.io/                                              #
 #                                                                              #
 # PyGithub is free software: you can redistribute it and/or modify it under    #
 # the terms of the GNU Lesser General Public License as published by the Free  #
@@ -30,7 +30,7 @@ import github.GithubObject
 
 class GitAuthor(github.GithubObject.NonCompletableGithubObject):
     """
-    This class represents GitAuthors as returned for example by http://developer.github.com/v3/todo
+    This class represents GitAuthors
     """
 
     def __repr__(self):

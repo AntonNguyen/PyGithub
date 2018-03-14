@@ -5,7 +5,7 @@
 # Copyright 2013 Vincent Jacques <vincent@vincent-jacques.net>                 #
 #                                                                              #
 # This file is part of PyGithub.                                               #
-# http://pygithub.github.io/PyGithub/v1/index.html                             #
+# http://pygithub.readthedocs.io/                                              #
 #                                                                              #
 # PyGithub is free software: you can redistribute it and/or modify it under    #
 # the terms of the GNU Lesser General Public License as published by the Free  #
@@ -27,7 +27,7 @@ import github.GithubObject
 
 class StatsCommitActivity(github.GithubObject.NonCompletableGithubObject):
     """
-    This class represents statistics of commit activity. The reference can be found here http://developer.github.com/v3/repos/statistics/#get-the-last-year-of-commit-activity-data
+    This class represents StatsCommitActivities. The reference can be found here http://developer.github.com/v3/repos/statistics/#get-the-last-year-of-commit-activity-data
     """
 
     @property

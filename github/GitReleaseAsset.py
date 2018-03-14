@@ -9,7 +9,7 @@
 # Copyright 2017 Chris McBride <christopher.mcbride@gmail.com>                 #
 #                                                                              #
 # This file is part of PyGithub.                                               #
-# http://pygithub.github.io/PyGithub/v1/index.html                             #
+# http://pygithub.readthedocs.io/                                              #
 #                                                                              #
 # PyGithub is free software: you can redistribute it and/or modify it under    #
 # the terms of the GNU Lesser General Public License as published by the Free  #
@@ -31,10 +31,7 @@ import github.GithubObject
 
 class GitReleaseAsset(github.GithubObject.CompletableGithubObject):
     """
-    This class represents GitReleaseAssets as returned by
-        GET /repos/:owner/:repo/releases/assets/:id
-    See:
-    https://developer.github.com/v3/repos/releases/#get-a-single-release-asset
+    This class represents GitReleaseAssets. The reference can be found here https://developer.github.com/v3/repos/releases/#get-a-single-release-asset
     """
 
     def __repr__(self):

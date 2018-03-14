@@ -5,7 +5,7 @@
 # Copyright 2013 Vincent Jacques <vincent@vincent-jacques.net>                 #
 #                                                                              #
 # This file is part of PyGithub.                                               #
-# http://pygithub.github.io/PyGithub/v1/index.html                             #
+# http://pygithub.readthedocs.io/                                              #
 #                                                                              #
 # PyGithub is free software: you can redistribute it and/or modify it under    #
 # the terms of the GNU Lesser General Public License as published by the Free  #
@@ -27,7 +27,7 @@ import github.GithubObject
 
 class Status(github.GithubObject.NonCompletableGithubObject):
     """
-    This class represents status as defined in https://status.github.com/api
+    This class represents Statuses. The reference can be found here https://status.github.com/api
     """
 
     def __repr__(self):

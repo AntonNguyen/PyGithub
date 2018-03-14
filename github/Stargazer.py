@@ -14,7 +14,7 @@
 # Copyright 2015 Dan Vanderkam <danvdk@gmail.com>                              #
 #                                                                              #
 # This file is part of PyGithub.                                               #
-# http://pygithub.github.io/PyGithub/v1/index.html                             #
+# http://pygithub.readthedocs.io/                                              #
 #                                                                              #
 # PyGithub is free software: you can redistribute it and/or modify it under    #
 # the terms of the GNU Lesser General Public License as published by the Free  #
@@ -36,8 +36,7 @@ import github
 
 class Stargazer(github.GithubObject.NonCompletableGithubObject):
     """
-    This class represents Stargazers with the date of starring as returned by
-    https://developer.github.com/v3/activity/starring/#alternative-response-with-star-creation-timestamps
+    This class represents Stargazers. The reference can be found here https://developer.github.com/v3/activity/starring/#alternative-response-with-star-creation-timestamps
     """
 
     def __repr__(self):

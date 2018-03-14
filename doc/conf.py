@@ -6,7 +6,7 @@
 # Copyright 2013 Vincent Jacques <vincent@vincent-jacques.net>                 #
 #                                                                              #
 # This file is part of PyGithub.                                               #
-# http://pygithub.github.io/PyGithub/v1/index.html                             #
+# http://pygithub.readthedocs.io/                                              #
 #                                                                              #
 # PyGithub is free software: you can redistribute it and/or modify it under    #
 # the terms of the GNU Lesser General Public License as published by the Free  #
@@ -36,8 +36,8 @@
 
 import sys
 import os
-import shutil
 import glob
+import datetime
 
 # If extensions (or modules to document with autodoc) are in another directory,
 # add these directories to sys.path here. If the directory is relative to the
@@ -68,7 +68,7 @@ master_doc = 'index'
 
 # General information about the project.
 project = u'PyGithub'
-copyright = u'2018, Vincent Jacques'
+copyright = u'%d, Vincent Jacques' % datetime.date.today().year
 
 # The version info for the project you're documenting, acts as replacement for
 # |version| and |release|, also used in various other places throughout the
@@ -351,5 +351,3 @@ with open("apis.rst", "w") as apis:
             if verb in verbs:
                 apis.write("  * " + verb + ": " + " or ".join(sorted(verbs[verb])) + "\n")
         apis.write("\n")
-
-# shutil.copyfile("../Contributing.rst", "contributing.rst")

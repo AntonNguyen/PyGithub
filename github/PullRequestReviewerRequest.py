@@ -9,7 +9,7 @@
 # Copyright 2013 Vincent Jacques <vincent@vincent-jacques.net>                 #
 #                                                                              #
 # This file is part of PyGithub.                                               #
-# http://pygithub.github.io/PyGithub/v1/index.html                             #
+# http://pygithub.readthedocs.io/                                              #
 #                                                                              #
 # PyGithub is free software: you can redistribute it and/or modify it under    #
 # the terms of the GNU Lesser General Public License as published by the Free  #
@@ -33,7 +33,7 @@ import github.NamedUser
 
 class PullRequestReviewerRequest(github.GithubObject.CompletableGithubObject):
     """
-    This class represents Pull Request Reviewer Requests as returned for example by https://developer.github.com/v3/pulls/review_requests/
+    This class represents PullRequestReviewerRequests. The reference can be found here https://developer.github.com/v3/pulls/review_requests/
     """
 
     def __repr__(self):

@@ -8,7 +8,7 @@
 # Copyright 2013 Vincent Jacques <vincent@vincent-jacques.net>                 #
 #                                                                              #
 # This file is part of PyGithub.                                               #
-# http://pygithub.github.io/PyGithub/v1/index.html                             #
+# http://pygithub.readthedocs.io/                                              #
 #                                                                              #
 # PyGithub is free software: you can redistribute it and/or modify it under    #
 # the terms of the GNU Lesser General Public License as published by the Free  #
@@ -33,7 +33,7 @@ import github.Repository
 
 class CommitCombinedStatus(github.GithubObject.NonCompletableGithubObject):
     """
-    This class represents CommitCombinedStatus as returned for example by https://developer.github.com/v3/repos/statuses/
+    This class represents CommitCombinedStatuses. The reference can be found here https://developer.github.com/v3/repos/statuses/#get-the-combined-status-for-a-specific-ref
     """
 
     def __repr__(self):

@@ -7,7 +7,7 @@
 # Copyright 2013 Vincent Jacques <vincent@vincent-jacques.net>                 #
 #                                                                              #
 # This file is part of PyGithub.                                               #
-# http://pygithub.github.io/PyGithub/v1/index.html                             #
+# http://pygithub.readthedocs.io/                                              #
 #                                                                              #
 # PyGithub is free software: you can redistribute it and/or modify it under    #
 # the terms of the GNU Lesser General Public License as published by the Free  #
@@ -40,6 +40,7 @@ class Team(Framework.TestCase):
         self.assertEqual(self.team.permission, "pull")
         self.assertEqual(self.team.repos_count, 0)
         self.assertEqual(self.team.url, "https://api.github.com/teams/189850")
+        self.assertEqual(self.team.organization, self.org)
 
         # test __repr__() based on this attributes
         self.assertEqual(self.team.__repr__(), 'Team(name="Team created by PyGithub", id=189850)')

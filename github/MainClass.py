@@ -9,7 +9,7 @@
 # Copyright 2013 Vincent Jacques <vincent@vincent-jacques.net>                 #
 #                                                                              #
 # This file is part of PyGithub.                                               #
-# http://pygithub.github.io/PyGithub/v1/index.html                             #
+# http://pygithub.readthedocs.io/                                              #
 #                                                                              #
 # PyGithub is free software: you can redistribute it and/or modify it under    #
 # the terms of the GNU Lesser General Public License as published by the Free  #
@@ -61,7 +61,7 @@ DEFAULT_PER_PAGE = 30
 
 class Github(object):
     """
-    This is the main class you instanciate to access the Github API v3. Optional parameters allow different authentication methods.
+    This is the main class you instantiate to access the Github API v3. Optional parameters allow different authentication methods.
     """
 
     def __init__(self, login_or_token=None, password=None, base_url=DEFAULT_BASE_URL, timeout=DEFAULT_TIMEOUT, client_id=None, client_secret=None, user_agent='PyGithub/Python', per_page=DEFAULT_PER_PAGE, api_preview=False):
@@ -443,6 +443,45 @@ class Github(object):
             self.__requester,
             "/search/code",
             url_parameters
+        )
+
+
+    def search_commits(self, query, sort=github.GithubObject.NotSet, order=github.GithubObject.NotSet, **qualifiers):
+        """
+        :calls: `GET /search/commits <http://developer.github.com/v3/search>`_
+        :param query: string
+        :param sort: string ('author-date', 'committer-date')
+        :param order: string ('asc', 'desc')
+        :param qualifiers: keyword dict query qualifiers
+        :rtype: :class:`github.PaginatedList.PaginatedList` of :class:`github.Commit.Commit`
+        """
+        assert isinstance(query, (str, unicode)), query
+        url_parameters = dict()
+        if sort is not github.GithubObject.NotSet:  # pragma no branch (Should be covered)
+            assert sort in ('author-date', 'committer-date'), sort
+            url_parameters["sort"] = sort
+        if order is not github.GithubObject.NotSet:  # pragma no branch (Should be covered)
+            assert order in ('asc', 'desc'), order
+            url_parameters["order"] = order
+
+        query_chunks = []
+        if query:  # pragma no branch (Should be covered)
+            query_chunks.append(query)
+
+        for qualifier, value in qualifiers.items():
+            query_chunks.append("%s:%s" % (qualifier, value))
+
+        url_parameters["q"] = ' '.join(query_chunks)
+        assert url_parameters["q"], "need at least one qualifier"
+
+        return github.PaginatedList.PaginatedList(
+            github.Commit.Commit,
+            self.__requester,
+            "/search/commits",
+            url_parameters,
+            headers={
+                "Accept": "application/vnd.github.cloak-preview"
+            }
         )
 
     def render_markdown(self, text, context=github.GithubObject.NotSet):

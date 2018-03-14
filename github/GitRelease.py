@@ -5,7 +5,7 @@
 # Copyright 2015 Ed Holland <eholland@alertlogic.com>                          #
 #                                                                              #
 # This file is part of PyGithub.                                               #
-# http://pygithub.github.io/PyGithub/v1/index.html                             #
+# http://pygithub.readthedocs.io/                                              #
 #                                                                              #
 # PyGithub is free software: you can redistribute it and/or modify it under    #
 # the terms of the GNU Lesser General Public License as published by the Free  #
@@ -30,7 +30,7 @@ import github.GitReleaseAsset
 
 class GitRelease(github.GithubObject.CompletableGithubObject):
     """
-    This class represents GitRelease as returned for example by https://developer.github.com/v3/repos/releases
+    This class represents GitReleases. The reference can be found here https://developer.github.com/v3/repos/releases
     """
 
     def __repr__(self):

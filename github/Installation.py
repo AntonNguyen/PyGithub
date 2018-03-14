@@ -5,7 +5,7 @@
 # Copyright 2017 Jannis Gebauer <ja.geb@me.com>                                #
 #                                                                              #
 # This file is part of PyGithub.                                               #
-# http://pygithub.github.io/PyGithub/v1/index.html                             #
+# http://pygithub.readthedocs.io/                                              #
 #                                                                              #
 # PyGithub is free software: you can redistribute it and/or modify it under    #
 # the terms of the GNU Lesser General Public License as published by the Free  #
@@ -41,7 +41,7 @@ INTEGRATION_PREVIEW_HEADERS = {"Accept": "application/vnd.github.machine-man-pre
 
 class Installation(github.GithubObject.NonCompletableGithubObject):
     """
-    This class represents Installations as in https://developer.github.com/v3/integrations/installations
+    This class represents Installations. The reference can be found here https://developer.github.com/v3/apps/installations/
     """
 
     def __repr__(self):

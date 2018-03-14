@@ -9,7 +9,7 @@
 # Copyright 2013 Vincent Jacques <vincent@vincent-jacques.net>                 #
 #                                                                              #
 # This file is part of PyGithub.                                               #
-# http://pygithub.github.io/PyGithub/v1/index.html                             #
+# http://pygithub.readthedocs.io/                                              #
 #                                                                              #
 # PyGithub is free software: you can redistribute it and/or modify it under    #
 # the terms of the GNU Lesser General Public License as published by the Free  #
@@ -45,7 +45,7 @@ import github.Notification
 
 class AuthenticatedUser(github.GithubObject.CompletableGithubObject):
     """
-    This class represents AuthenticatedUsers as returned for example by http://developer.github.com/v3/todo
+    This class represents AuthenticatedUsers as returned by https://developer.github.com/v3/users/#get-the-authenticated-user
 
     An AuthenticatedUser object can be created by calling ``get_user()`` on a Github object.
     """
